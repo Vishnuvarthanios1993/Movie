@@ -7,18 +7,15 @@
 
 import SwiftUI
 import CoreData
-
+import SDWebImageSwiftUI
 struct DetailsView: View {
     let movie: Movie
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(movie.posterPath ?? "")")) { image in
-                    image.resizable()
-                } placeholder: {
-                    Color.gray
-                }
+                WebImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(movie.posterPath ?? "")"))
+                    .resizable()
                 .scaledToFit()
                 .cornerRadius(10)
                 .shadow(radius: 5)
