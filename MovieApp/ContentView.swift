@@ -7,7 +7,7 @@
 
 import SwiftUI
 import CoreData
-
+import SDWebImageSwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = MovieViewModel()
@@ -43,13 +43,10 @@ struct MovieRow: View {
 
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(movie.posterPath ?? "")")) { image in
-                image.resizable()
-            } placeholder: {
-                Color.gray
-            }
-            .frame(width: 80, height: 120)
-            .cornerRadius(8)
+            WebImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(movie.posterPath ?? "")"))
+                .resizable()
+                .frame(width: 80, height: 120)
+                .cornerRadius(8)
 
             VStack(alignment: .leading) {
                 Text(movie.title)
