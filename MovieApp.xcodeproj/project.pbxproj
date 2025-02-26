@@ -25,6 +25,8 @@
 		DD1D82312D6F0F5F0071D24C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD00F31A2D6EEC4900A52969 /* APIService.swift */; };
 		DD1D82322D6F10510071D24C /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD00F3182D6EEC4900A52969 /* MovieModel.swift */; };
 		DD1D82332D6F109D0071D24C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD00F31A2D6EEC4900A52969 /* APIService.swift */; };
+		DD1D82362D6F140B0071D24C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = DD1D82352D6F140B0071D24C /* SDWebImageSwiftUI */; };
+		DD1D82382D6F14A50071D24C /* MockServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1D82372D6F14A50071D24C /* MockServiceTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,7 @@
 		DD1D82272D6EFD2F0071D24C /* FavouriteDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteDataManager.swift; sourceTree = "<group>"; };
 		DD1D822A2D6EFDB40071D24C /* FavoriteMovie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FavoriteMovie+CoreDataClass.swift"; path = "MovieApp/FavoriteMovie+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DD1D822B2D6EFDB40071D24C /* FavoriteMovie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FavoriteMovie+CoreDataProperties.swift"; path = "MovieApp/FavoriteMovie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DD1D82372D6F14A50071D24C /* MockServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1D82362D6F140B0071D24C /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				DD00F2FE2D6EEBFF00A52969 /* MovieAppTests.swift */,
+				DD1D82372D6F14A50071D24C /* MockServiceTest.swift */,
 			);
 			path = MovieAppTests;
 			sourceTree = "<group>";
@@ -206,6 +211,9 @@
 			dependencies = (
 			);
 			name = MovieApp;
+			packageProductDependencies = (
+				DD1D82352D6F140B0071D24C /* SDWebImageSwiftUI */,
+			);
 			productName = MovieApp;
 			productReference = DD00F2E52D6EEBFE00A52969 /* MovieApp.app */;
 			productType = "com.apple.product-type.application";
@@ -278,6 +286,9 @@
 				Base,
 			);
 			mainGroup = DD00F2DC2D6EEBFD00A52969;
+			packageReferences = (
+				DD1D82342D6F140B0071D24C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = DD00F2E62D6EEBFE00A52969 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -340,6 +351,7 @@
 				DD1D82322D6F10510071D24C /* MovieModel.swift in Sources */,
 				DD1D82332D6F109D0071D24C /* APIService.swift in Sources */,
 				DD00F2FF2D6EEBFF00A52969 /* MovieAppTests.swift in Sources */,
+				DD1D82382D6F14A50071D24C /* MockServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,6 +668,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DD1D82342D6F140B0071D24C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DD1D82352D6F140B0071D24C /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD1D82342D6F140B0071D24C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		DD00F2F32D6EEBFF00A52969 /* MovieApp.xcdatamodeld */ = {
